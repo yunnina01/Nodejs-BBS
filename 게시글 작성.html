@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+    </head>
+    <body>
+        <table border = "2" width = 1000>
+            <tr>
+                <th colspan = "2" height = 50>
+                    게시글 작성
+                </th>
+            </tr>
+            <tr>
+                <td align = center width = 100>
+                    제목
+                </td>
+                <td height = 30>
+                    <input id = "title" type = "text" placeholder = "제목을 입력하세요. (30자 이내)"
+                    maxlength = 30 style = "width : 99%; height : 90%">
+                </td>
+            </tr>
+            <tr>
+                <td colspan = "2" height = 500>
+                    <textarea id = "content" placeholder = "내용을 입력하세요. (1000자 이내)"
+                    style = "width : 100%; height : 100%"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td colspan = "2" align = right>
+                    <button type = "button" class = "navyBtn" onClick = "location.href = '게시판.html'">완료
+                    <button type = "button" class = "navyBtn" onClick = "location.href = '게시판.html'">취소
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
