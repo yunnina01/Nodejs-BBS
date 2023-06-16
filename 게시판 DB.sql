@@ -30,10 +30,13 @@ INCREMENT BY 1
 MAXVALUE 999999;
 
 ALTER SEQUENCE 게시글번호 restart;
+ALTER SEQUENCE 댓글번호 restart;
 
-INSERT INTO 게시글 VALUES (NEXTVAL(게시글번호), "안녕하세요.", "홍길동", '2023-06-03', "123456789");
-INSERT INTO 게시글 VALUES (NEXTVAL(게시글번호), "나는 길동이에요.", "홍길동", '2023-06-03', "123456789");
+INSERT INTO 게시글 VALUES (NEXTVAL(게시글번호), "안녕하세요.", "홍길동", CURDATE(), "123456789");
+INSERT INTO 댓글 VALUES (NEXTVAL(댓글번호), 1, "놀부", NOW(), "댓글 테스트");
 
-SELECT * FROM 게시글 articles LIMIT 0,5;
+SELECT * FROM 게시글 LIMIT 0, 20;
+SELECT * FROM 댓글 LIMIT 0, 20;
 
 DELETE FROM 게시글;
+DELETE FROM 댓글;

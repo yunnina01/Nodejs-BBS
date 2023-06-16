@@ -1,10 +1,10 @@
-var maria = require('mysql');
+var mysql = require('mysql');
 
-var con = maria.createConnection = {
+var con = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: 'mariadhavkd',
     database: "nb"
-};
+});
 
 module.exports = con;
